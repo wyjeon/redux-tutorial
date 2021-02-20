@@ -7,7 +7,7 @@ const counterHeadings = document.getElementsByTagName('h1')[0];
 const plusButton = document.getElementById('plus-btn');
 const minusButton = document.getElementById('minus-btn');
 
-// 액션 생성 함수 정의
+// 액션 타입 정의
 const TOGGLE_SWITCH = 'TOGGLE_SWITCH';
 const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
@@ -22,3 +22,27 @@ const initialState = {
   light: false,
   counter: 0,
 };
+
+// 리듀서 함수 정의
+function reducer(state = initialState, action) {
+  switch (action.type) {
+    case TOGGLE_SWITCH:
+      return {
+        ...state, // 기존의 값은 그대로 두면서
+        light: !state.light, // light 값 반전시키기
+      };
+    case INCREMENT:
+      return {
+        ...state,
+        counter: state.counter + action.diff,
+      };
+    case DECREMENT:
+      return {
+        ...state,
+        counter: state.counter - 1,
+      };
+    default:
+      // 지원하지 않는 액션의 경우 상태 유지
+      return state;
+  }
+}
