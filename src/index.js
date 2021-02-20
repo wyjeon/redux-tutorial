@@ -46,3 +46,6 @@ function reducer(state = initialState, action) {
       return state;
   }
 }
+
+// 스토어 만들기
+const store = createStore(reducer);
