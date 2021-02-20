@@ -49,3 +49,19 @@ function reducer(state = initialState, action) {
 
 // 스토어 만들기
 const store = createStore(reducer);
+
+// render 함수 만들기
+const render = () => {
+  const state = store.getState(); // 현재 상태를 가져옵니다.
+  const { light, counter } = state; // 편의상 비구조화 할당
+  if (light) {
+    lightDiv.style.background = 'green';
+    switchButton.innerText = '끄기';
+  } else {
+    lightDiv.style.background = 'gray';
+    switchButton.innerText = '켜기';
+  }
+  counterHeadings.innerText = counter;
+};
+
+render();
