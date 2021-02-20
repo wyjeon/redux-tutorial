@@ -20,8 +20,8 @@ const decrement = () => ({ type: DECREMENT });
 
 // 초기값 설정
 const initialState = {
-  light: true,
-  counter: 713,
+  light: false,
+  counter: 0,
 };
 
 // 리듀서 함수 정의
@@ -69,3 +69,16 @@ render();
 
 // 구독하기
 store.subscribe(render);
+
+// 이벤트 달아주기, 액션 발생 시키기
+switchButton.onclick = () => {
+  store.dispatch(toggleSwitch());
+};
+
+plusButton.onclick = () => {
+  store.dispatch(increment(5));
+};
+
+minusButton.onclick = () => {
+  store.dispatch(decrement());
+};
