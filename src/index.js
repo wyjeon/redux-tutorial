@@ -16,3 +16,9 @@ const DECREMENT = 'DECREMENT';
 const toggleSwitch = () => ({ type: TOGGLE_SWITCH });
 const increment = diff => ({ type: INCREMENT, diff });
 const decrement = () => ({ type: DECREMENT });
+
+// 초기값 설정
+const initialState = {
+  light: false,
+  counter: 0,
+};
