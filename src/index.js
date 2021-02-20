@@ -11,3 +11,8 @@ const minusButton = document.getElementById('minus-btn');
 const TOGGLE_SWITCH = 'TOGGLE_SWITCH';
 const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
+
+// 액션 생성함수 정의
+const toggleSwitch = () => ({ type: TOGGLE_SWITCH });
+const increment = diff => ({ type: INCREMENT, diff });
+const decrement = () => ({ type: DECREMENT });
