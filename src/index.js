@@ -1,4 +1,5 @@
 import { createStore } from 'redux';
+import './index.css';
 
 const lightDiv = document.getElementsByClassName('light')[0];
 const switchButton = document.getElementById('switch-btn');
@@ -19,8 +20,8 @@ const decrement = () => ({ type: DECREMENT });
 
 // 초기값 설정
 const initialState = {
-  light: false,
-  counter: 0,
+  light: true,
+  counter: 713,
 };
 
 // 리듀서 함수 정의
@@ -65,3 +66,6 @@ const render = () => {
 };
 
 render();
+
+// 구독하기
+store.subscribe(render);
