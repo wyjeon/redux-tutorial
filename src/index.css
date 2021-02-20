@@ -1,13 +1,22 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.switch {
+  padding: 1rem;
+  background: black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.switch .light {
+  background: gray;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 2rem;
+}
+
+.switch button {
+  margin-top: 1rem;
+
+  padding: 0.25rem 1rem;
+  font-size: 1rem;
+}
+
+.counter h1 {
+  margin-bottom: 0rem;
 }
